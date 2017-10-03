@@ -5,7 +5,7 @@ const logger = require('morgan');
 const config = require('./config/main');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-// const router = require('./router');
+const router = require('./router');
 
 // Database Connection
 var promise =
@@ -31,4 +31,4 @@ app.use(function(req, res, next) {
   next();
 });
 
-// router(app);
+router(app);
